@@ -1,0 +1,235 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Bricolage Grotesque', 'Poppins', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  *, ::before, ::after {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #020408;
+    color: #ffffff;
+  }
+
+  body {
+    background-color: #020408;
+    color: #ffffff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* ─── Cursor Dot & Glow ────────────────────────────────────────── */
+.cursor-dot {
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-glow {
+  pointer-events: none;
+  filter: blur(32px);
+  z-index: 9999;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+/* ─── Hero Grid Background ─────────────────────────────────────── */
+.hero-grid {
+  opacity: 0.55;
+  will-change: transform, background-position;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    radial-gradient(at 50% 120%, rgba(255, 255, 255, 0.03), transparent 60%);
+  background-size: 80px 80px, 80px 80px, 100% 100%;
+}
+
+/* ─── Glass Cards & Nav ────────────────────────────────────────── */
+.glass-card {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-dot {
+  background: linear-gradient(#4ce6ff, #5f54ff);
+  border-radius: 9999px;
+  width: 3px;
+  height: 8px;
+  margin-top: 4px;
+}
+
+/* ─── 2D Physics Skills Sandbox (ps2d) ─────────────────────────── */
+.ps2d-scene {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 768px) {
+  .ps2d-scene {
+    height: 440px;
+    width: 95vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .ps2d-scene {
+    width: 100%;
+    height: 380px;
+  }
+}
+
+.ps2d-tile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.15s ease;
+  will-change: transform;
+}
+
+.ps2d-tile:active {
+  cursor: grabbing;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.ps2d-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.ps2d-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ps2d-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Gradient Animation ───────────────────────────────────────── */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s ease infinite;
+}
+
+/* ─── Marquee Scroll Animation (Testimonials) ──────────────────── */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Continuous 360deg Orbit Revolution (Profile Avatar Orbit) ── */
+@keyframes orbit-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes orbit-counter-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.animate-orbit {
+  animation: orbit-spin 22s linear infinite;
+}
+
+.animate-orbit-counter {
+  animation: orbit-counter-spin 22s linear infinite;
+}
+
+/* ─── Orbit Float Animation ─────────────────────────────────────── */
+@keyframes orbit-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  25% { transform: translateY(-6px) scale(1.05); }
+  50% { transform: translateY(0px) scale(1); }
+  75% { transform: translateY(6px) scale(0.95); }
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #080B16;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
+}
