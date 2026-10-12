@@ -7,14 +7,16 @@ export const navItems = [
   { id: 'contact', label: 'Contact' },
 ];
 
+const baseUrl = import.meta.env.BASE_URL;
+
 // ─── Hero Section ───────────────────────────────────────────────
 export const heroData = {
   name: 'Mohammed Faizan',
   subtitle: 'AI/ML Engineer & Software Developer',
   bio: 'B.Tech Computer Science (AI & ML) student building agentic AI systems, embedded security hardware, and full-stack applications with a focus on secure, real-world engineering.',
-  resumeUrl: '/Mohammed_Faizan_Resume.pdf',
-  cvUrl: '/Mohammed_Faizan_CV_Photo.pdf',
-  photoUrl: '/assets/faizan_photo.jpeg',
+  resumeUrl: `${baseUrl}Mohammed_Faizan_Resume.pdf`,
+  cvUrl: `${baseUrl}Mohammed_Faizan_CV_Photo.pdf`,
+  photoUrl: `${baseUrl}assets/faizan_photo.jpeg`,
   phone: '+91 7019569171',
   email: 'faizzz9842@gmail.com',
   location: 'Bengaluru, Karnataka, India',
@@ -40,7 +42,7 @@ export const projectsData = [
       'Semantic similarity lookup with ChromaDB & PostgreSQL',
     ],
     technologies: ['Python', 'LangGraph', 'Wazuh SIEM', 'PostgreSQL', 'ChromaDB', 'HTMX', 'FastAPI'],
-    image: '/assets/p1.png',
+    image: `${baseUrl}assets/p1.png`,
     githubUrl: 'https://github.com/Faizz-code9',
     liveUrl: 'https://github.com/Faizz-code9',
     gradientFrom: '#06b6d4',
@@ -59,7 +61,7 @@ export const projectsData = [
       'Tamper-resistant on-chip flash credential storage',
     ],
     technologies: ['C', 'STM32', 'USB', 'mbedTLS', 'FIDO2', 'CTAP2', 'Cryptography'],
-    image: '/assets/p2.png',
+    image: `${baseUrl}assets/p2.png`,
     githubUrl: 'https://github.com/Faizz-code9',
     liveUrl: 'https://github.com/Faizz-code9',
     gradientFrom: '#a855f7',
@@ -78,7 +80,7 @@ export const projectsData = [
       'Co-authored IEEE research submission with 1.03s latency',
     ],
     technologies: ['Python', 'Mistral-7B', 'TomTom API', 'OpenWeatherMap', 'Algorithms', 'FastAPI'],
-    image: '/assets/p3.png',
+    image: `${baseUrl}assets/p3.png`,
     githubUrl: 'https://github.com/Faizz-code9',
     liveUrl: 'https://github.com/Faizz-code9',
     gradientFrom: '#f59e0b',
@@ -97,7 +99,7 @@ export const projectsData = [
       'Secure health metrics database with PostgreSQL',
     ],
     technologies: ['Python', 'React', 'Next.js', 'Web Audio API', 'PostgreSQL', 'Tailwind CSS'],
-    image: '/assets/p4.png',
+    image: `${baseUrl}assets/p4.png`,
     githubUrl: 'https://github.com/Faizz-code9',
     liveUrl: 'https://github.com/Faizz-code9',
     gradientFrom: '#10b981',
