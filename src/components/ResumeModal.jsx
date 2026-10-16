@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, FileText, Share2, ExternalLink } from 'lucide-react';
+import { X, FileText, Share2, ExternalLink, Download } from 'lucide-react';
 import { heroData } from '../data/portfolioData';
 
 export function ResumeModal({ isOpen, onClose }) {
