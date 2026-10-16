@@ -14,8 +14,8 @@ export const heroData = {
   name: 'Mohammed Faizan',
   subtitle: 'AI/ML Engineer & Software Developer',
   bio: 'B.Tech Computer Science (AI & ML) student building agentic AI systems, embedded security hardware, and full-stack applications with a focus on secure, real-world engineering.',
-  resumeUrl: `${baseUrl}Mohammed_Faizan_Resume.pdf`,
-  cvUrl: `${baseUrl}Mohammed_Faizan_CV_Photo.pdf`,
+  resumeUrl: `${baseUrl}Mohammed_Faizan_Resume.pdf?v=20261016`,
+  cvUrl: `${baseUrl}Mohammed_Faizan_CV_Photo.pdf?v=20261016`,
   photoUrl: `${baseUrl}assets/faizan_photo.jpeg`,
   phone: '+91 7019569171',
   email: 'faizzz9842@gmail.com',
@@ -23,7 +23,7 @@ export const heroData = {
   social: {
     github: 'https://github.com/Faizz-code9',
     linkedin: 'https://www.linkedin.com/in/mohammed-faizan-9a69a4357/',
-    twitter: 'https://github.com/Faizz-code9',
+    twitter: 'https://x.com/Faizz_98_',
   },
 };
 
@@ -185,10 +185,24 @@ export const achievementsData = [
   },
   {
     title: 'Top 10 in 4 Hackathons',
-    subtitle: 'Top 15 in CTF; Mentor at State Hackathon.',
+    subtitle: 'Top 15 in 1 CTF; Mentor at State Hackathon.',
     period: '2024–2026',
     badge: 'Hackathon Finalist',
     icon: '🚀',
+  },
+  {
+    title: 'Head of Volunteers & Student Coordinator',
+    subtitle: 'AI 360° Unmasking AI for Society – Pre-Summit Event of India-AI Impact Summit 2026, PES University.',
+    period: '2026',
+    badge: 'Leadership',
+    icon: '🌟',
+  },
+  {
+    title: 'Campus Involvement: 5 Student Clubs',
+    subtitle: 'Active member of AIESEC, Samarpana, Weal, DEBSOC, and AL Coding.',
+    period: '2024–Present',
+    badge: 'Campus Clubs',
+    icon: '🤝',
   },
   {
     title: 'Best Outgoing Student of the Year',
@@ -196,13 +210,6 @@ export const achievementsData = [
     period: '2022',
     badge: 'Gold Medalist',
     icon: '⭐',
-  },
-  {
-    title: 'Head of Volunteers',
-    subtitle: 'AI 360° India-AI Impact Summit Pre-Summit.',
-    period: '2025',
-    badge: 'Leadership',
-    icon: '🌟',
   },
 ];
 
@@ -223,6 +230,7 @@ export const skillsData = [
   { key: 'python', label: 'Python', color: '#3776AB' },
   { key: 'langgraph', label: 'LangGraph', color: '#22D3EE' },
   { key: 'c', label: 'C/C++', color: '#00599C' },
+  { key: 'rust', label: 'Rust', color: '#DEA584' },
   { key: 'react', label: 'React', color: '#61DAFB' },
   { key: 'next', label: 'Next.js', color: '#E0E0E0' },
   { key: 'fastapi', label: 'FastAPI', color: '#009688' },

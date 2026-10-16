@@ -16,6 +16,7 @@ import {
   SiFastapi,
   SiKubernetes,
   SiLinux,
+  SiRust,
 } from 'react-icons/si';
 import { Cpu, ShieldCheck, Database, BrainCircuit } from 'lucide-react';
 
@@ -23,6 +24,7 @@ const iconMap = {
   python: SiPython,
   langgraph: BrainCircuit,
   c: SiCplusplus,
+  rust: SiRust,
   react: SiReact,
   next: SiNextdotjs,
   fastapi: SiFastapi,

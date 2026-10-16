@@ -136,6 +136,17 @@ export function ResumeModal({ isOpen, onClose }) {
               View
             </a>
 
+            {/* Direct Download Button */}
+            <a
+              href={current.url}
+              download={activeDoc === 'resume' ? 'Mohammed_Faizan_Resume.pdf' : 'Mohammed_Faizan_CV_Photo.pdf'}
+              aria-label="Download document"
+              title="Download PDF"
+              className="w-12 h-12 rounded-full bg-white hover:bg-gray-100 text-gray-900 flex items-center justify-center shadow-2xl transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <Download size={19} />
+            </a>
+
             {/* Share / Open Button */}
             <button
               onClick={handleShare}
