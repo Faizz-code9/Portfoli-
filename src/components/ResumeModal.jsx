@@ -111,6 +111,7 @@ export function ResumeModal({ isOpen, onClose }) {
             {/* Embedded Live PDF Document Viewer */}
             <div className="w-full h-[440px] sm:h-[480px] rounded-2xl bg-[#FAFAFA] border border-gray-200 mt-2 overflow-hidden shadow-inner relative">
               <iframe
+                key={current.url}
                 src={`${current.url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
                 title={`${current.title} Preview`}
                 className="w-full h-full border-0 rounded-2xl bg-white"
